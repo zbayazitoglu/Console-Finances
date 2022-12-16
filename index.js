@@ -104,8 +104,6 @@ var finances = [
     }
 
     //The average of the changes in Profit/Losses over the entire period.
-    var avarage = (totalAmount/totalMonth).toFixed(2);
-
     //The greatest increase in profits (date and amount) over the entire period.
     //The greatest decrease in losses (date and amount) over the entire period.
     var diffrence = 0;
@@ -113,6 +111,7 @@ var finances = [
     var leastProfit = 0;
     var monthsGreatestProfit = "";
     var monthsLeastProfit = "";
+    var totalChange = 0 ;
     for(var i=0; i<finances.length - 1; i++) {
         diffrence = finances[i+1][1] - finances[i][1];
         if(diffrence > geratestProfit) {
@@ -123,7 +122,10 @@ var finances = [
             leastProfit = diffrence;
             monthsLeastProfit = finances[i+1][0];
         }
+        totalChange += diffrence;
     }
+
+    var avarage = (totalChange/totalMonth - 1).toFixed(2);
 
 var analysis = 'Financial Analysis ' + '\n' + 
 '----------------' + '\n' + 

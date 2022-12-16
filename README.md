@@ -14,7 +14,7 @@ The JavaScript code analyzes the records to calculate each of the following:
 
 
 # Result
-![Result](./images/Screenshot.png)
+![Result](./images/Screenshot%20.png)
 
 
 # Project Github URL
